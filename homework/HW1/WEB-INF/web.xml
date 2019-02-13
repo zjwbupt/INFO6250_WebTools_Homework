@@ -1,0 +1,71 @@
+<web-app>
+	
+    <servlet>
+        <servlet-name>Part2</servlet-name>
+        <servlet-class>HW1_Part2</servlet-class>
+    </servlet>    
+    <servlet-mapping>
+        <servlet-name>Part2</servlet-name>
+        <url-pattern>/part2</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Part3</servlet-name>
+        <servlet-class>HW1_Part3</servlet-class>
+    </servlet>    
+    <servlet-mapping>
+        <servlet-name>Part3</servlet-name>
+        <url-pattern>/part3</url-pattern>
+    </servlet-mapping>
+
+
+	<servlet>
+        <servlet-name>Part4</servlet-name>
+        <servlet-class>HW1_Part4</servlet-class>
+    </servlet>    
+	<servlet-mapping>
+        <servlet-name>Part4</servlet-name>
+        <url-pattern>/part4</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Part5</servlet-name>
+        <servlet-class>HW1_Part5</servlet-class>
+    </servlet>    
+    <servlet-mapping>
+        <servlet-name>Part5</servlet-name>
+        <url-pattern>/part5</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Part6</servlet-name>
+        <servlet-class>HW1_Part6</servlet-class>
+    </servlet>    
+    <servlet-mapping>
+        <servlet-name>Part6</servlet-name>
+        <url-pattern>/part6</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Part6_2</servlet-name>
+        <servlet-class>HW1_Part6_2</servlet-class>
+    </servlet>    
+    <servlet-mapping>
+        <servlet-name>Part6_2</servlet-name>
+        <url-pattern>/part6_2</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Part6_Result</servlet-name>
+        <servlet-class>HW1_Part6_Result</servlet-class>
+    </servlet>    
+    <servlet-mapping>
+        <servlet-name>Part6_Result</servlet-name>
+        <url-pattern>/part6_result</url-pattern>
+    </servlet-mapping>
+	
+	
+     <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+</web-app>

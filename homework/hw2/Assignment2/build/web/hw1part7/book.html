@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Shop for Books</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <a href="book.html">Books</a>
+            <a href="music.html">Music</a>
+            <a href="computer.html">Computer</a>
+        </div>
+        <h1>Shop for Books</h1><br/><br/>
+        <form  action="addOrDelete" method="post" >
+            <label>
+                <input type = "checkbox" name="product" value="b1"/>  Java Servlet Programming  [$1]  
+            </label><br/><br/>
+            <label>
+                <input type = "checkbox" name="product" value="b2"/>  Oracle Database Programming  [$2]  
+            </label><br/><br/>
+            <label>
+                <input type = "checkbox" name="product" value="b3"/>  System Analysis and Design with UML  [$3] 
+            </label><br/><br/>
+            <label>
+                <input type = "checkbox" name="product" value="b4"/>  Object Oriented Software Engineering  [$4]
+            </label><br/><br/>
+            <label>
+                <input type = "checkbox" name="product" value="b5"/>  Java Web Services  [$5]   
+            </label><br/><br/>
+            
+            <input type = "submit" name="submit" value="Add to Cart"/> <br/><br/>
+            <input type = "hidden" name="action" value="add"/><br/><br/>
+            
+            <a href="../addOrDelete">View Cart</a><br/><br/>
+        </form>
+    </body>
+</html>
