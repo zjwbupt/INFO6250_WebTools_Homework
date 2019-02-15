@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+<!--    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>/WEB-INF/applicationContext.xml</param-value>
+    </context-param>
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+    <servlet>
+        <servlet-name>dispatcher</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <load-on-startup>2</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>dispatcher</servlet-name>
+        <url-pattern>*.htm</url-pattern>
+    </servlet-mapping>-->
+    <servlet>
+        <servlet-name>ShoppingController</servlet-name>
+        <servlet-class>servlet.ShoppingController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ShoppingController</servlet-name>
+        <url-pattern>/Part5/ShoppingController</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>csvReader</servlet-name>
+        <servlet-class>csvReader</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>csvReader</servlet-name>
+        <url-pattern>/Part6/csvReader</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>manageMovie</servlet-name>
+        <servlet-class>manageMovie</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>manageMovie</servlet-name>
+        <url-pattern>/Part7/manageMovie</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>addMovie</servlet-name>
+        <servlet-class>addMovie</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>addMovie</servlet-name>
+        <url-pattern>/Part7/addMovie</url-pattern>
+    </servlet-mapping>
+    
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+    
+    
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>Part7</web-resource-name>
+            <url-pattern>/Part7/*</url-pattern>
+            <http-method>GET</http-method>
+            <http-method>POST</http-method>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>tomcat</role-name>
+        </auth-constraint>
+    </security-constraint>
+
+    <security-role>
+        <role-name>tomcat</role-name>
+    </security-role>
+
+    <login-config>
+        <auth-method>FORM</auth-method>
+        <form-login-config>
+            <form-login-page>/admin/login.jsp</form-login-page>
+            <form-error-page>/admin/login-error.html</form-error-page>
+        </form-login-config>
+    </login-config>
+        
+        
+</web-app>
