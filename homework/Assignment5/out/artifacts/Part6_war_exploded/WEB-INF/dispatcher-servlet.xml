@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/View/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+    <bean name="/add.htm" class="Controller.AddController">
+        <property name="commandName" value="movie"/>
+        <property name="commandClass" value="Model.Movie"/>
+        <property name="formView" value="add"/>
+        <property name="successView" value="addResult"/>
+        <property name="validator">
+            <bean class="Validator.MovieValidator"/>
+        </property>
+    </bean>
+
+    <bean name="/browse.htm" class="Controller.BrowseController">
+        <property name="commandName" value="search"/>
+        <property name="commandClass" value="Model.Search"/>
+        <property name="formView" value="browse"/>
+        <property name="successView" value="browseResult"/>
+    </bean>
+
+    <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basenames">
+            <list>
+                <value>errors</value>
+            </list>
+        </property>
+    </bean>
+</beans>
