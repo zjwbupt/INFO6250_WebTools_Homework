@@ -5,9 +5,9 @@
 <hibernate-configuration>
     <session-factory>
         <property name="connection.username">root</property>
-        <property name="connection.password">123456</property>
+        <property name="connection.password">p@ssw0rd</property>
         <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-        <property name="connection.url">jdbc:mysql://localhost:3306/info6250?serverTimezone=UTC</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/moviedb?serverTimezone=UTC</property>
         <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
 
         <property name="show_sql">true</property>
