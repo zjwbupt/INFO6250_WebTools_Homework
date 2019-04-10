@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+
 import com.zjw.springdemo.entity.Customer;
 
 @Repository
@@ -27,7 +28,7 @@ public class CustomerDAOImpl implements CustomerDAO {
 		
 		//create a query
 		Query<Customer> theQuery = 
-				currentSession.createNamedQuery("from Customer", Customer.class);
+				currentSession.createQuery("from Customer", Customer.class);
 		//execute query and get result list
 		List<Customer> customers = theQuery.getResultList();
 		

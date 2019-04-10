@@ -22,11 +22,11 @@ public class CustomerController {
 	public String listCustomers(Model theModel) {
 		
 		//get customer from the dao
-		List<Customer> theCustomer = customerDAO.getCustomers();
+		List<Customer> theCustomers = customerDAO.getCustomers();
 		
 		
 		//add the customer to the model
-		theModel.addAttribute("customers", theCustomer);
+		theModel.addAttribute("customers", theCustomers);
 		
 		System.out.println("start to switch to listcustomers");
 		return "list-customers";
