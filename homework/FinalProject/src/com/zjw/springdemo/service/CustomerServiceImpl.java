@@ -1,13 +1,12 @@
 package com.zjw.springdemo.service;
 
-import java.util.List;
-
+import com.zjw.springdemo.dao.CustomerDAO;
+import com.zjw.springdemo.entity.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.zjw.springdemo.dao.CustomerDAO;
-import com.zjw.springdemo.entity.Customer;
+import java.util.List;
 
 @Service
 public class CustomerServiceImpl implements CustomerService{
@@ -35,7 +34,12 @@ public class CustomerServiceImpl implements CustomerService{
 		
 		return customerDAO.getCustomers(theId);
 	}
-	
-	
+
+	@Override
+	@Transactional
+	public void deleteCustomer(int theId) {
+		customerDAO.deleteCustomer(theId);
+	}
+
 
 }

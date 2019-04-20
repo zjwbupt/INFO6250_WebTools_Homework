@@ -1,19 +1,13 @@
 package com.zjw.springdemo.controller;
 
-import java.util.List;
-
+import com.zjw.springdemo.entity.Customer;
+import com.zjw.springdemo.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
-import com.zjw.springdemo.dao.CustomerDAO;
-import com.zjw.springdemo.entity.Customer;
-import com.zjw.springdemo.service.CustomerService;
+import java.util.List;
 @Controller
 @RequestMapping("/customer")
 public class CustomerController {
@@ -66,5 +60,14 @@ public class CustomerController {
 		
 		
 		return "customer-form";
+	}
+
+	@GetMapping("/delete")
+	public String deleteCustomer(@RequestParam("customerId") int theId){
+
+		//delete the customer from the database
+		customerService.deleteCustomer(theId);
+
+		return "redirect:/customer/list";
 	}
 }
